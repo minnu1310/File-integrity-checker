@@ -1,62 +1,67 @@
-# File Integrity Checker
-
-This is a Python-based tool developed as part of an internship project to monitor changes in files by calculating and comparing their SHA-256 hash values. It helps ensure file integrity by detecting any unauthorized modifications, deletions, or changes.
-
----
+# 🛡 Task 1 - File Integrity Checker
 
 ##  Objective
-
-To build a tool that:
-- Calculates hash values of files (using hashlib)
-- Stores those hash values
-- Later checks whether any file has been changed or deleted by comparing current hash values with the saved ones
-
----
-
-## Technologies Used
-
-- **Python 3**
-- hashlib – for hashing files
-- os – for file and directory access
-- json – to store and retrieve hashes
+Build a Python tool to monitor changes in files by calculating and comparing hash values using SHA-256. This ensures file integrity and alerts if any file is modified, deleted, or missing.
 
 ---
 
 ##  Features
 
-- Save SHA-256 hash values of all files in a given folder
-- Compare saved hash values with current ones to check integrity
-- Detect:
-  - Unchanged files
-  - Modified files
-  - Deleted or moved files
-- Simple menu-based command-line interface (runs in IDLE too)
+-  Monitors any folder and its files
+-  Calculates SHA-256 hash for each file
+-  Stores hash values in a JSON file (`hashes.json`)
+-  Compares current file hashes with original ones
+-  Detects modified, deleted, or safe (unchanged) files
+-  Simple command-line/IDLE interface
+-  Clean, commented, beginner-friendly code
 
 ---
 
-##  How to Use
+##  Technology Stack
 
-1. **Run the script** using Python (in IDLE or terminal)
-2. Choose an option from the menu:
-   - `1` → Save file hashes
-   - `2` → Check file integrity
-3. Provide the required folder path or hash file path
+- **Language**: Python 3.13  
+- **Hashing**: `hashlib` (SHA-256)  
+- **File Handling**: `os`, `json` modules  
+- **Platform**: Works in IDLE, terminal, or any Python environment
+
+---
+
+##  How to Run the Project
+
+1. Open the script in **IDLE** or terminal
+2. Run `file_integrity_checker.py`
+3. Select an option from the menu:
+   - Save file hashes
+   - Check file integrity
 
 ---
 
 ##  Example Output
 
-``plaintext
- FILE INTEGRITY CHECKER ?
+```
+ FILE INTEGRITY CHECKER 
 
 1. Save current file hashes
 2. Check file integrity
 3. Exit
 
 Enter your choice (1/2/3): 2
-Enter path to hash file (hashes.json): C:/Users/Documents/hashes.json
+Enter path to hash file: C:/Users/Minnu/Desktop/hashes.json
+
  Checking file integrity...
 
-[OK] File is unchanged: C:/Users/Documents/file1.txt
-[CHANGED] File was modified: C:/Users/Documents/report.docx
-[MISSING] File deleted or moved: C:/Users/Documents/data.xlsx
+[OK] File is unchanged: notes.txt
+[CHANGED] File was modified: report.docx
+[MISSING] File deleted or moved: data.xlsx
+```
+
+---
+
+##  Notes
+
+- File hashes are calculated using SHA-256.
+- `hashes.json` must be kept safe and not edited manually.
+- If any file is changed, its hash won’t match the original.
+- You must provide the correct path when checking integrity.
+
+---
