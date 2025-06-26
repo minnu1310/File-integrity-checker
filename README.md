@@ -1,4 +1,16 @@
-# 🛡 Task 1 - File Integrity Checker
+COMPANY: CODTECH IT SOLUTIONS
+
+NAME: DONTHA SUSHRUTHA
+
+INTERN ID: CTO4DF574
+
+DOMAIN: CYBER SECURTIY & ETHICAL HACKING
+
+DURATION: 4 WEEKS
+
+MENTOR: NEELA SANTOSH
+
+#  Task 1 - File Integrity Checker
 
 ##  Objective
 Build a Python tool to monitor changes in files by calculating and comparing hash values using SHA-256. This ensures file integrity and alerts if any file is modified, deleted, or missing.
@@ -36,32 +48,11 @@ Build a Python tool to monitor changes in files by calculating and comparing has
 
 ---
 
-##  Example Output
+##  Output
 
-```
- FILE INTEGRITY CHECKER 
+![Image](https://github.com/user-attachments/assets/b43ba460-621e-4462-b26d-0f799375cf85)
 
-1. Save current file hashes
-2. Check file integrity
-3. Exit
+![Image](https://github.com/user-attachments/assets/0f7f32ac-d716-4731-a808-d6c7ea09a0ca)
 
-Enter your choice (1/2/3): 2
-Enter path to hash file: C:/Users/Minnu/Desktop/hashes.json
+![Image](https://github.com/user-attachments/assets/f33653d6-5211-47ec-92e7-d7189c1aa619)
 
- Checking file integrity...
-
-[OK] File is unchanged: notes.txt
-[CHANGED] File was modified: report.docx
-[MISSING] File deleted or moved: data.xlsx
-```
-
----
-
-##  Notes
-
-- File hashes are calculated using SHA-256.
-- `hashes.json` must be kept safe and not edited manually.
-- If any file is changed, its hash won’t match the original.
-- You must provide the correct path when checking integrity.
-
----
